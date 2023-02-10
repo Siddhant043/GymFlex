@@ -110,3 +110,37 @@ export const featuresData = [
       "Manage gym staff schedules, assign tasks, and track employee attendance and performance",
   },
 ];
+
+export const planData = [
+  {
+    planName: "Basic",
+    price: "Free",
+    originalPrice: "19",
+    features: ["Member Mangement", "Attendance Tracking"],
+    ctaText: "Get Started",
+  },
+
+  {
+    planName: "Standart",
+    price: "99",
+    features: [
+      "Basic plan features",
+      "Staff management",
+      "Reporting and analytics",
+      "Payment Processing",
+    ],
+    ctaText: "Get Started",
+  },
+
+  {
+    planName: "Premium",
+    price: "199",
+    features: [
+      "Standard plan features",
+      "Scheduling and booking",
+      "Inventory management",
+      "Marketing and communication",
+    ],
+    ctaText: "Get Started",
+  },
+];

@@ -6,6 +6,9 @@ export const MainGrid = styled(Grid)`
   cursor: pointer;
   border-radius: 10px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &.sm {
     padding: 10px 22px;

@@ -52,6 +52,7 @@ export const SubHeadingLeft = styled.h4`
 
 export const ItemImage = styled.img`
   width: 350px;
+
   @media screen and (max-width: 900px) {
     width: 250px;
   }

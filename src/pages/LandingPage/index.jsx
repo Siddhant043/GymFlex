@@ -3,6 +3,7 @@ import React from "react";
 import BenefitsSection from "../../components/LandingPageSections/BenefitsSection";
 import FeaturesSection from "../../components/LandingPageSections/FeaturesSection";
 import HeroSection from "../../components/LandingPageSections/HeroSection";
+import PlanSection from "../../components/LandingPageSections/PlanSection";
 
 const LandingPage = () => {
   return (
@@ -10,6 +11,7 @@ const LandingPage = () => {
       <HeroSection />
       <BenefitsSection />
       <FeaturesSection />
+      <PlanSection />
     </Grid>
   );
 };
