@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import { benefitsData } from "./data";
+import { benefitsData } from "../data";
 import BackgroundImage from "../../../assets/benefits-background.svg";
 import {
   BackgroundStyles,

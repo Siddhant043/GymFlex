@@ -24,8 +24,9 @@ export const StyledDivider = styled.div`
 export const SubHeading = styled.h4`
   max-width: 544px;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 27px;
+  color: #b7b4c7;
   text-align: center;
 
   @media screen and (max-width: 600px) {

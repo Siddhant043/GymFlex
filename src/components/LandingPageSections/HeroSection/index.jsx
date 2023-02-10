@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import { heroTextData } from "./data";
+import { heroTextData } from "../data";
 import { MainHeading, StyledDivider, SubHeading } from "./styles";
 import CommonButton from "../../CommonButton";
 

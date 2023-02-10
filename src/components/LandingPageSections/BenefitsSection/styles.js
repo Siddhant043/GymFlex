@@ -47,8 +47,9 @@ export const ItemHeading = styled.h3`
 
 export const ItemSubHeading = styled.h4`
   max-width: 300px;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 16px;
+  color: #b7b4c7;
   text-align: center;
   @media screen and (max-width: 600px) {
     font-size: 12px;
