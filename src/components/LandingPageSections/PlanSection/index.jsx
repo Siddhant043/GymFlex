@@ -13,7 +13,6 @@ import {
 } from "./styles";
 
 const PlanCard = ({ item }) => {
-  console.log(item);
   return (
     <Grid
       item
@@ -54,7 +53,7 @@ const PlanCard = ({ item }) => {
           <PlanText>This plan includes:</PlanText>
           <PlanItemContainer px={2}>
             {item.features.map((feature, idx) => (
-              <PlanItem>{`${idx + 1}. ${feature}`}</PlanItem>
+              <PlanItem key={idx}>{`${idx + 1}. ${feature}`}</PlanItem>
             ))}
           </PlanItemContainer>
         </Grid>
@@ -82,8 +81,8 @@ const PlanSection = () => {
         rowGap={below900 ? 8 : 0}
       >
         {planData.map((item, index) => (
-          <Grid item>
-            <PlanCard item={item} key={index} />
+          <Grid item key={index}>
+            <PlanCard item={item} />
           </Grid>
         ))}
       </Grid>

@@ -24,7 +24,7 @@ const Footer = () => {
         mt={4}
       >
         <h4 style={{ cursor: "pointer" }}>Join our team</h4>
-        <h4 style={{ cursor: "pointer" }}>Copyright GymFlex 2023</h4>
+        <h4>Copyright GymFlex 2023</h4>
       </Grid>
     </Grid>
   );

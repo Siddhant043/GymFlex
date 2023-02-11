@@ -149,9 +149,7 @@ const FeaturesSection = () => {
       <Grid container item rowGap={10} justifyContent="center">
         {below600
           ? featuresData.map((item, idx) => (
-              <>
-                <MWebCard item={item} index={idx} key={`featuresItem_${idx}`} />
-              </>
+              <MWebCard item={item} index={idx} key={`featuresItem_${idx}`} />
             ))
           : featuresData.map((item, idx) => (
               <>
