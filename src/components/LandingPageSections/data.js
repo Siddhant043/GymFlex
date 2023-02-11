@@ -18,7 +18,7 @@ export const heroTextData = {
   subHeading:
     "Our comprehensive software helps you manage your gym, track member attendance, and process payments.",
 
-  ctaText: "Start your free trail",
+  ctaText: "Pre Register",
 };
 
 export const benefitsData = [
@@ -117,7 +117,7 @@ export const planData = [
     price: "Free",
     originalPrice: "19",
     features: ["Member Mangement", "Attendance Tracking"],
-    ctaText: "Get Started",
+    ctaText: "Pre Register",
   },
 
   {
@@ -129,7 +129,7 @@ export const planData = [
       "Reporting and analytics",
       "Payment Processing",
     ],
-    ctaText: "Get Started",
+    ctaText: "Pre Register",
   },
 
   {
@@ -141,6 +141,6 @@ export const planData = [
       "Inventory management",
       "Marketing and communication",
     ],
-    ctaText: "Get Started",
+    ctaText: "Pre Register",
   },
 ];
