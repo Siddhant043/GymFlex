@@ -27,7 +27,7 @@ const OnBoarding = () => {
 export default OnBoarding;
 
 export const CustomModal = styled(Dialog)`
-  .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+  .MuiPaper-elevation {
     width: 400px !important;
     margin: auto;
     display: flex !important;
@@ -36,5 +36,8 @@ export const CustomModal = styled(Dialog)`
     color: #ffffff !important;
     border-radius: 10px !important;
     padding: 30px 0px !important;
+  }
+  @media (max-width: 900px) {
+    background: #252525 !important;
   }
 `;
