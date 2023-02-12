@@ -68,7 +68,13 @@ const PlanCard = ({ item }) => {
 const PlanSection = () => {
   const below900 = useMediaQuery("(max-width: 900px)");
   return (
-    <Grid container flexDirection={"column"} alignItems="center" mt={18}>
+    <Grid
+      container
+      flexDirection={"column"}
+      alignItems="center"
+      mt={18}
+      id="plan-section"
+    >
       <Grid item>
         <SectionTitle>Chose you plan</SectionTitle>
       </Grid>

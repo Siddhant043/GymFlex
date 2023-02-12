@@ -13,7 +13,13 @@ import {
 
 const BenefitsSection = () => {
   return (
-    <Grid container flexDirection={"column"} alignItems="center" mt={18}>
+    <Grid
+      container
+      flexDirection={"column"}
+      alignItems="center"
+      mt={18}
+      id="benefits-section"
+    >
       <Grid item>
         <SectionTitle>Benefits</SectionTitle>
       </Grid>

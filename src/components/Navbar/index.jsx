@@ -6,6 +6,11 @@ import { navItems } from "./data";
 import { LogoImage, NavbarItem, StyledLink } from "./styles";
 
 const Navbar = () => {
+  const handleScroll = (id, e) => {
+    const features = document.querySelector(`#${id}`);
+    features.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <Grid
       container
@@ -21,7 +26,9 @@ const Navbar = () => {
       <Grid item container width={"fit-content"}>
         {navItems.map((item, idx) => (
           <NavbarItem item px={2} key={`navItem_${idx}`}>
-            <StyledLink>{item}</StyledLink>
+            <StyledLink onClick={(e) => handleScroll(item.id, e)}>
+              {item.name}
+            </StyledLink>
           </NavbarItem>
         ))}
       </Grid>

@@ -142,7 +142,13 @@ const MWebCard = ({ item, index }) => {
 const FeaturesSection = () => {
   const below600 = useMediaQuery("(max-width: 600px)");
   return (
-    <Grid container flexDirection={"column"} alignItems="center" mt={18}>
+    <Grid
+      container
+      flexDirection={"column"}
+      alignItems="center"
+      mt={18}
+      id="features-section"
+    >
       <Grid item>
         <SectionTitle>Features</SectionTitle>
       </Grid>
