@@ -11,17 +11,18 @@ export const useOnBoarding = (phoneNumber) => {
       setUsers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
     getUsers();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const alreadyHaveNumber = users.find(
     (user) => user.phoneNumber === phoneNumber
   );
-  const postUsersData = async(data) => {
-    await addDoc(collectionRef,data)
-  }
+  const postUsersData = async (data) => {
+    await addDoc(collectionRef, data);
+  };
 
   return {
     users,
     alreadyHaveNumber,
-    postUsersData
+    postUsersData,
   };
 };
