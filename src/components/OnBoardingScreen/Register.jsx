@@ -29,7 +29,6 @@ const Register = () => {
       [name]: value,
     });
   };
-  console.log(userInfo, "user");
   const handleSubmit = async () => {
     if (alreadyHaveNumber) {
       return;
