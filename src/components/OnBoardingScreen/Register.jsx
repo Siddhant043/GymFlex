@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   styled,
   DialogTitle,
@@ -11,12 +11,18 @@ import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import { registerStep } from "../../features/slice/homeSlice";
 import { useDispatch } from "react-redux";
 import CustomButton from "../Reusables/CustomButton";
+import { useOnBoarding } from "../../hooks/useOnBoading";
 
 const Register = () => {
   const dispatch = useDispatch();
   const [phoneNumber, setPhoneNumber] = React.useState();
-  const handleSubmit = () => {
+  const { alreadyHaveNumber, postUsersData } = useOnBoarding(phoneNumber);
+  const handleSubmit = async () => {
+    if (alreadyHaveNumber) {
+      return;
+    }
     if (isValidPhoneNumber(phoneNumber)) {
+      await postUsersData({ phoneNumber: phoneNumber });
       dispatch(registerStep({ number: phoneNumber, stepNo: 2 }));
     }
   };
