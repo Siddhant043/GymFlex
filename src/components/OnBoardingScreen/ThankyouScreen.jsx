@@ -9,9 +9,16 @@ const ThankyouScreen = () => {
   const dispatch = useDispatch();
   return (
     <TYContainer>
-      <img src={ThankyouGif} alt="" />
-      <Typography fontWeight={700} fontSize={24} mt={2}>
-        Thank You
+      <img width={"40px"} src={ThankyouGif} alt="" />
+      <Typography
+        fontWeight={300}
+        fontSize={18}
+        mt={2}
+        px={2}
+        textAlign="center"
+      >
+        Thank you for pre-registering on our website. We appreciate your support
+        and can't wait to share our platform with you soon!
       </Typography>
       <CustomButton onClick={() => dispatch(updateModal(false))}>
         Close

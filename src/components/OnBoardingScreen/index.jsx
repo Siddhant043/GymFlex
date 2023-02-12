@@ -27,15 +27,14 @@ const OnBoarding = () => {
 export default OnBoarding;
 
 export const CustomModal = styled(Dialog)`
-  .css-1t1j96h-MuiPaper-root-MuiDialog-paper{
-    width:400px !important;
-    margin:auto;
-    display;flex !important;
-    align-items:center;
-    background:#252525 !important;
-    color:#ffffff !important;
-    border-radius:10px !important;
-    padding:30px 0px !important;
+  .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+    width: 400px !important;
+    margin: auto;
+    display: flex !important;
+    align-items: center;
+    background: #252525 !important;
+    color: #ffffff !important;
+    border-radius: 10px !important;
+    padding: 30px 0px !important;
   }
-
 `;
