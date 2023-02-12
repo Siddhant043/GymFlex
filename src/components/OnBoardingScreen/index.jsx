@@ -27,7 +27,7 @@ const OnBoarding = () => {
 export default OnBoarding;
 
 export const CustomModal = styled(Dialog)`
-  .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+  .MuiPaper-elevation {
     width: 400px !important;
     margin: auto;
     display: flex !important;
