@@ -37,4 +37,7 @@ export const CustomModal = styled(Dialog)`
     border-radius: 10px !important;
     padding: 30px 0px !important;
   }
+  @media (max-width: 900px) {
+    background: #252525 !important;
+  }
 `;
