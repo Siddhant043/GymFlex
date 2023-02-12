@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "GymFlex",
+  "name": "Effortlessly manage your gym with GymFlex",
   "icons": [
     {
       "src": "favicon.ico",
