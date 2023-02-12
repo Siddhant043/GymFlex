@@ -121,7 +121,7 @@ export const planData = [
   },
 
   {
-    planName: "Standart",
+    planName: "Standard",
     price: "99",
     features: [
       "Basic plan features",
