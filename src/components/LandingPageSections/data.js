@@ -115,7 +115,7 @@ export const planData = [
   {
     planName: "Basic",
     price: "Free",
-    originalPrice: "19",
+    originalPrice: "49",
     features: ["Member Mangement", "Attendance Tracking"],
     ctaText: "Pre Register",
   },
