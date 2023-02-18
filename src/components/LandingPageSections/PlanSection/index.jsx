@@ -27,7 +27,7 @@ const PlanCard = ({ item }) => {
         px={2}
         sx={{ borderRadius: "10px", cursor: "pointer" }}
         width={{ xs: "100%", md: "30vw", lg: "28vw" }}
-        minHeight="700px"
+        minHeight={{ xs: "450px", md: "804px" }}
       >
         <Grid item container flexDirection="column" alignItems={"center"}>
           <StyledHeading>{item.planName}</StyledHeading>
