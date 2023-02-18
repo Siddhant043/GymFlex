@@ -1,5 +1,6 @@
 import { Grid, Typography, useMediaQuery } from "@mui/material";
 import React from "react";
+import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import { featuresData } from "../data";
 import {
   HeadingLeft,
@@ -24,15 +25,21 @@ const ImageLeftCard = ({ item }) => {
       py={4}
     >
       <Grid item xs={6}>
-        <ItemImage src={image} alt="" />
+        <ParallaxProvider>
+          <Parallax translateX={["-150px", "0px"]} scale={[0.75, 1.05]}>
+            <ItemImage src={image} alt="" />
+          </Parallax>
+        </ParallaxProvider>
       </Grid>
       <Grid container item xs={5} alignItems={"end"} flexDirection={"column"}>
+        <ParallaxProvider>
         <Grid item>
           <HeadingRight>{title}</HeadingRight>
         </Grid>
         <Grid item>
           <SubHeadingRight>{subTitle}</SubHeadingRight>
         </Grid>
+        </ParallaxProvider>
       </Grid>
     </Grid>
   );
@@ -60,7 +67,12 @@ const ImageRightCard = ({ item }) => {
         </Grid>
       </Grid>
       <Grid item>
-        <ItemImage src={image} alt="" />
+        <ParallaxProvider>
+          <Parallax translateX={["150px", "0px"]} scale={[0.75, 1.05]}>
+          <ItemImage src={image} alt="" />
+          </Parallax>
+        </ParallaxProvider>
+       
       </Grid>
     </Grid>
   );

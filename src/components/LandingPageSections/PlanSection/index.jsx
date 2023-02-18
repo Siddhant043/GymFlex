@@ -11,57 +11,64 @@ import {
   SectionTitle,
   StyledHeading,
 } from "./styles";
+import Tilt from "react-parallax-tilt";
 
 const PlanCard = ({ item }) => {
   return (
-    <Grid
-      item
-      xs={12}
-      container
-      bgcolor={"#fdfdfd"}
-      flexDirection="column"
-      justifyContent={"space-between"}
-      alignItems={"center"}
-      px={2}
-      sx={{ borderRadius: "10px" }}
-      width={{ xs: "100%", md: "30vw", lg: "28vw" }}
-      height="100%"
-    >
-      <Grid item container flexDirection="column" alignItems={"center"}>
-        <StyledHeading>{item.planName}</StyledHeading>
-
-        {item.originalPrice && (
-          <OriginalPrice>{`₹ ${item.originalPrice}/mo`}</OriginalPrice>
-        )}
-
+    <Tilt tiltMaxAngleX={3} tiltMaxAngleY={3}>
+      <Grid
+        item
+        xs={12}
+        container
+        bgcolor={"#fdfdfd"}
+        flexDirection="column"
+        justifyContent={"space-between"}
+        alignItems={"center"}
+        px={2}
+        sx={{ borderRadius: "10px", cursor: "pointer" }}
+        width={{ xs: "100%", md: "30vw", lg: "28vw" }}
+        minHeight="700px"
+      >
         <Grid item container flexDirection="column" alignItems={"center"}>
-          <MainPrice
-            style={{ marginBottom: item.price === "Free" ? "30px" : "0" }}
-          >
-            {item.price === "Free" ? `${item.price}` : `₹ ${item.price}/mo`}
-          </MainPrice>
+          <StyledHeading>{item.planName}</StyledHeading>
 
-          {item.price !== "Free" && (
-            <h4
-              style={{ color: "#37474f", fontSize: "16px", fontWeight: "300" }}
-            >
-              Billed anually
-            </h4>
+          {item.originalPrice && (
+            <OriginalPrice>{`₹ ${item.originalPrice}/mo`}</OriginalPrice>
           )}
+
+          <Grid item container flexDirection="column" alignItems={"center"}>
+            <MainPrice
+              style={{ marginBottom: item.price === "Free" ? "30px" : "0" }}
+            >
+              {item.price === "Free" ? `${item.price}` : `₹ ${item.price}/mo`}
+            </MainPrice>
+
+            {item.price !== "Free" && (
+              <h4
+                style={{
+                  color: "#37474f",
+                  fontSize: "16px",
+                  fontWeight: "300",
+                }}
+              >
+                Billed anually
+              </h4>
+            )}
+          </Grid>
+          <Grid item flexDirection={"column"}>
+            <PlanText>This plan includes:</PlanText>
+            <PlanItemContainer px={2}>
+              {item.features.map((feature, idx) => (
+                <PlanItem key={idx}>{`${idx + 1}. ${feature}`}</PlanItem>
+              ))}
+            </PlanItemContainer>
+          </Grid>
         </Grid>
-        <Grid item flexDirection={"column"}>
-          <PlanText>This plan includes:</PlanText>
-          <PlanItemContainer px={2}>
-            {item.features.map((feature, idx) => (
-              <PlanItem key={idx}>{`${idx + 1}. ${feature}`}</PlanItem>
-            ))}
-          </PlanItemContainer>
+        <Grid item mb={6}>
+          <CommonButton text={item.ctaText} />
         </Grid>
       </Grid>
-      <Grid item mb={6}>
-        <CommonButton text={item.ctaText} />
-      </Grid>
-    </Grid>
+    </Tilt>
   );
 };
 
