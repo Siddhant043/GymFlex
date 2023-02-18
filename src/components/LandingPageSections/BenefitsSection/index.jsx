@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Grid, Box } from "@mui/material";
 import React from "react";
 import { benefitsData } from "../data";
 import BackgroundImage from "../../../assets/benefits-background.svg";
@@ -10,6 +10,8 @@ import {
   ParentGrid,
   SectionTitle,
 } from "./styles";
+import { Parallax, ParallaxProvider } from "react-scroll-parallax";
+import Tilt from "react-parallax-tilt";
 
 const BenefitsSection = () => {
   return (
@@ -32,24 +34,19 @@ const BenefitsSection = () => {
       >
         <BackgroundStyles src={BackgroundImage} alt="" />
         {benefitsData.map((item, idx) => (
-          <BenefitItem
-            key={idx}
-            container
-            item
-            xs={12}
-            md={3}
-            flexDirection="column"
-            alignItems={"center"}
-            justifyContent="space-between"
-            px={{ xs: 2, md: 2 }}
-            py={{ xs: 2, md: 2 }}
-          >
-            <img src={item.image} alt={`benefits_${idx}`} />
-
-            <ItemHeading>{item.heading}</ItemHeading>
-
-            <ItemSubHeading>{item.subHeading}</ItemSubHeading>
-          </BenefitItem>
+          <Tilt tiltMaxAngleX={12} tiltMaxAngleY={12}>
+            <BenefitItem key={idx} container item spacing={2}>
+              <ParallaxProvider>
+                <Parallax scale={[0.75, 1]} speed={5}>
+                  <Box textAlign={"center"}>
+                    <img src={item.image} alt={`benefits_${idx}`} />
+                    <ItemHeading>{item.heading}</ItemHeading>
+                    <ItemSubHeading>{item.subHeading}</ItemSubHeading>
+                  </Box>
+                </Parallax>
+              </ParallaxProvider>
+            </BenefitItem>
+          </Tilt>
         ))}
       </ParentGrid>
     </Grid>
