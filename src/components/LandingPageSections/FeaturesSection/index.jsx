@@ -121,6 +121,7 @@ const MWebCard = ({ item, index }) => {
           fontWeight={600}
           textAlign="center"
           fontFamily={"Poppins"}
+          sx={{ margin: "auto" }}
         >
           {title}
         </Typography>
