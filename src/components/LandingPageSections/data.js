@@ -115,8 +115,8 @@ export const planData = [
   {
     planName: "Basic",
     price: "Free",
-    originalPrice: "49",
-    features: ["Member Mangement", "Attendance Tracking"],
+    originalPrice: "99",
+    features: ["Member Mangement", "Attendance Tracking", "50 Members Limit"],
     ctaText: "Pre Register",
   },
 
@@ -129,6 +129,7 @@ export const planData = [
       "Staff management",
       "Reporting and analytics",
       "Payment Processing",
+      "Unlimited Members",
     ],
     ctaText: "Pre Register",
   },
@@ -142,6 +143,7 @@ export const planData = [
       "Scheduling and booking",
       "Inventory management",
       "Marketing and communication",
+      "Unlimited Members",
     ],
     ctaText: "Pre Register",
   },
