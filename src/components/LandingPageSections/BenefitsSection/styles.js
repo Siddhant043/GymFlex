@@ -29,7 +29,7 @@ export const BenefitItem = styled(Grid)`
   backdrop-filter: blur(6.7px);
   -webkit-backdrop-filter: blur(6.7px);
   border: 1px solid rgba(0, 0, 0, 0.61);
-  fle-direction: column;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   @media screen and (max-width: 900px) {

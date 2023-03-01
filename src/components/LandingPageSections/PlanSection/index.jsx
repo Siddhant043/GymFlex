@@ -38,7 +38,7 @@ const PlanCard = ({ item }) => {
 
           <Grid item container flexDirection="column" alignItems={"center"}>
             <MainPrice
-              style={{ marginBottom: item.price === "Free" ? "30px" : "0" }}
+              style={{ marginBottom: item.price === "Free" ? "68px" : "0" }}
             >
               {item.price === "Free" ? `${item.price}` : `₹ ${item.price}/mo`}
             </MainPrice>

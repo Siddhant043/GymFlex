@@ -28,25 +28,33 @@ const BenefitsSection = () => {
       <ParentGrid
         item
         container
-        rowGap={4}
-        columnGap={{ xs: 1, md: 4 }}
+        rowGap={8}
+        columnGap={{ xs: 1, md: 8 }}
         justifyContent="center"
       >
         <BackgroundStyles src={BackgroundImage} alt="" />
         {benefitsData.map((item, idx) => (
-          <Tilt tiltMaxAngleX={12} tiltMaxAngleY={12}>
-            <BenefitItem key={idx} container item spacing={2}>
-              <ParallaxProvider>
-                <Parallax scale={[0.75, 1]} speed={5}>
-                  <Box textAlign={"center"}>
-                    <img src={item.image} alt={`benefits_${idx}`} />
-                    <ItemHeading>{item.heading}</ItemHeading>
-                    <ItemSubHeading>{item.subHeading}</ItemSubHeading>
-                  </Box>
-                </Parallax>
-              </ParallaxProvider>
-            </BenefitItem>
-          </Tilt>
+          <Grid
+            item
+            container
+            alignItems={"center"}
+            justifyContent={"center"}
+            lg={3}
+          >
+            <Tilt tiltMaxAngleX={12} tiltMaxAngleY={12}>
+              <BenefitItem key={idx} container item spacing={2}>
+                <ParallaxProvider>
+                  <Parallax scale={[0.75, 1]} speed={5}>
+                    <Box textAlign={"center"}>
+                      <img src={item.image} alt={`benefits_${idx}`} />
+                      <ItemHeading>{item.heading}</ItemHeading>
+                      <ItemSubHeading>{item.subHeading}</ItemSubHeading>
+                    </Box>
+                  </Parallax>
+                </ParallaxProvider>
+              </BenefitItem>
+            </Tilt>
+          </Grid>
         ))}
       </ParentGrid>
     </Grid>
